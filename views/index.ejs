@@ -3,10 +3,13 @@
   <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <ul class="right">
+      <%= JSON.stringify(user) %>
       <% if (user) { %>
         <li><a href="/logout">Logout</a></li>
       <% } else { %>
@@ -15,5 +18,8 @@
     </ul>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="javascripts/app.js"></script>
   </body>
 </html>
