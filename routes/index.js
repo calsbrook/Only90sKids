@@ -9,14 +9,8 @@ router.get('/', function(req, res, next) {
   res.render('./index', { title: '90s Kids', user: req.user });
 });
 
-function jon(req, res, next) {
-  console.log('fuck');
-  next();
-};
 
-app.use('jon');
-
-router.get('/auth/google', jon(), passport.authenticate(
+router.get('/auth/google', passport.authenticate(
   'google',
   {scope: ['profile', 'email'] }
 ));
