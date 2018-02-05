@@ -7,3 +7,6 @@ This is a test.
 
 ## Waow what a change
 >>>>>>> 6f58cdc6467da65eb673ae2a9dfb7961d5736959
+
+
+This project was built in 2018 by The SleepyHeads Crew. All Rights Reserved.
