@@ -1,9 +1,12 @@
-var songsController = require('../controllers/songsController');
-router.post('/songs', isLoggedIn, songsController.index);
+var express = require('express');
+var router = express.Router();
+var passport = require('passport');
 
-router.get('/', function(req, res, next) {
-    songsController.songDetails();
-    res.send('hi')
-  });
-  
-module.exports(router)
+const app = express();
+
+var songsController = require('../controllers/songsController');
+// router.post('/songs', isLoggedIn, songsController.index);
+
+router.get('/', songsController.songDetails);
+
+module.exports = router;
