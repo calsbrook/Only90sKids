@@ -1,24 +1,47 @@
+var request = require('request');
+const rootURL = 'https://api.spotify.com/'
+var auth = require('../config/auth')
+
 function isLoggedIn(req, res, next) {
     if ( req.isAuthenticated() ) return next();
     res.redirect('/auth/google');
 }
+var token = auth()
 
-var requrest = require('request');
-const rootURL = 'https://api.spotify.com'
 
 function songDetails(req, res) {
+    console.log(token)
+    var allSongs = []
     var title = req.body.name || req.query.name;
-    request(rootURL, function (err, res, body) {
-        console.log(body)
-    })
     var id = req.body.id
-    console.log(res)
     var options = {
-        url: rootURL + '/v1/tracks/' + id,
+        url: rootURL + 'v1/tracks/' + '3n3Ppam7vgaVa1iaRUc9Lp',
         headers: {
-            'Authorization': 'Bearer ' + process.env.SPOTIFY_CLIENT_ID
+            'Authorization': 'Bearer ' + token
         }
     }
+    request({url: 'https://api.spotify.com/v1/users/myplay.com/playlists/3C64V048fGyQfCjmu9TIGA/tracks',
+    headers: {'Authorization': 'Bearer ' + token}}, function (err, response, body){
+        // var test = JSON.parse(body).items[0].track.artists[0].name
+        // JSON.parse(body).items.forEach(function(element) {
+        //     allSongs.push(element)
+        // })
+        // console.log(allSongs[0].track.album.id)
+
+        res.render('songs/index', {title: '90s Kids', song: req.body, allSongs})        
+        // console.log(songos[0].track.album)
+        // console.log(songos.length)
+        // console.log(songos[songos.length - 1])
+        // console.log(test)
+        // console.log(songos[0].track.artists[0].name)
+        // return songos
+    })
+    request(options, function (err, response, body) {
+        //var test = JSON.parse(response.body)
+        // console.log(test)
+    })
+
+    
 }
 
 
