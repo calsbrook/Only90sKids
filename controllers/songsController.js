@@ -7,10 +7,10 @@ function isLoggedIn(req, res, next) {
     res.redirect('/auth/google');
 }
 
-function renderSongQuiz(req, res) {
-    console.log('test');
-    res.json("[cool, joe, hey]");
-}
+// function renderSongQuiz(req, res) {
+//     console.log('test');
+//     res.json("[cool, joe, hey]");
+// }
 
 
 function songDetails(req, res) {
@@ -69,5 +69,5 @@ function songDetails(req, res) {
 
 
 module.exports = {
-    songDetails, renderSongQuiz
+    songDetails
 }
