@@ -8,6 +8,11 @@ function isLoggedIn(req, res, next) {
 }
 var token = auth()
 
+function renderSongQuiz(req, res) {
+    console.log('test');
+    res.json("[cool, joe, hey]");
+}
+
 
 function songDetails(req, res) {
     console.log(token)
@@ -46,5 +51,5 @@ function songDetails(req, res) {
 
 
 module.exports = {
-    songDetails
+    songDetails, renderSongQuiz
 }

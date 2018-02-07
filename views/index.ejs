@@ -1,23 +1,182 @@
 <!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Jockey+One|Londrina+Solid|Oswald|Press+Start+2P|Squada+One" rel="stylesheet">
+
 <html>
   <head>
     <title><%= title %></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <ul class="right">
-      <%= JSON.stringify(user) %>
-      <% if (user) { %>
-        <li><a href="/logout">Logout</a></li>
-      <% } else { %>
-        <li><a href="/auth/google">Login with Google</a></li>
-      <% } %>
-    </ul>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <style>
+      body {
+          background: linear-gradient(#891aa5, #fc6b32) no-repeat fixed;
+      }
+
+      #only901 {
+          width: 250px;
+      }
+
+      .centerboard {
+          width: 100%;
+          height: 400px;
+          /* background-color: rgb(255, 255, 255); */
+          right: 0.5px;
+          position: fixed;
+          /* border-top: 1px rgba(0, 255, 0, 0.13) solid; */
+          /* border-bottom: 1px lime solid; */
+      }
+
+      #test90 {
+          position: relative;
+          margin: -210px 0px 0px 170px;
+      }
+
+      .gameinfo {
+          color: white;
+          position: relative;
+          column-count: 4;
+          margin: 260px 0px 0px 20px;
+      }
+
+      .gameinfo > li {
+          background: radial-gradient(rgb(240,255,29), green)no-repeat fixed;
+          /* background-color: rgb(240, 255, 29); */
+          width: 250px;
+          height: 200px;
+          border-radius: 15px;
+          padding: 10px;
+          font-family: 'Press Start 2P', cursive;
+          font-size: 12px;
+          color: black;
+          list-style: none;
+          border: 2px solid salmon;
+      }
+
+     h1 {
+         font-size: 9px;
+     }
+
+
+      #pressstart {
+          background: radial-gradient(rgb(6, 167, 6), rgb(18, 148, 18));
+          color: white;
+          font-family: 'Press Start 2P', cursive;
+          /* border: none; */
+          width: 400px;  
+          height: 30px;
+          border-radius: 15px;
+          margin: 370px 0px 0px 250px;
+          position: fixed;
+      }
+
+      #pressstart:hover {
+          border: 3px orange solid;
+          color: fuchsia;
+      }
+
+      .login {
+        float: right;
+        list-style: none;
+      }
+
+      a:visited, a:active, a { 
+        color: whitesmoke;
+        font-family: 'Press Start 2P', cursive;
+}
+
+        
+      
+
+
+  </style>
+
+<div class="login">  
+  <p><% if (user) { %>
+  <li><a href="/logout">Logout</a></li>
+<% } else { %>
+  <li><a href="/auth/google">Click Here to LOGIN!</a></li>
+<% } %></p>
+</div>
+
+<img src="https://i.imgur.com/kTXEP2d.png" id="only901" alt="">    
+
+<!-- <button id="pressstart">PRESS START</button> -->
+
+<div class="centerboard">
+  <!-- <img src="https://i.imgur.com/Trucr23.png" id="test90"> -->
+  <img src="https://i.imgur.com/MVyBObg.png" id="test90">
+</div>
+
+<button id="pressstart">PRESS START</button>
+
+<div class="gameinfo">
+  
+      <li><h1>Test Your 90's Once And For All</h1> <br>
+          <p>Finally you have a chance to define WHO'S WHO! Double Dare your friends to play this game.</p>
+      </li>
+      
+      
+      <li><h1>Be A Kid Again</h1><br>
+          <p>Wish you could replay 1995? See Trivia about all of your favorite musicians and TV show's from the 90's.</p>
+      </li>
+          
+      <li><h1>Join the Leaderboard</h1><br>
+          <p>Find Your Way to the Top - Beat the Best Scores and claim the #1 Spot.</p>
+      </li>
+          
+      <li><h1>Top Score, Top Prize</h1><br>
+          <p>Still on Top? Defeat more challengers and recieve stars on your rank, even if you stop playing.</p>
+      </li>
+</div>
+
+
+
+
+<script>
+
+// Get the modal
+// var modal = document.getElementById('myModal');
+
+// // Get the button that opens the modal
+// var btn = document.getElementById("pressstart");
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+
+// // When the user clicks on the button, open the modal 
+
+// btn.onclick = function() {
+//     modal.style.display = "block";
+// }
+
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//    modal.style.display = "none";
+// }
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+
+// setTimeout(function() {
+//   window.location = "/";
+// }, 3000);
+
+
+
+
+  </script>
+              
+
+
+          
+  
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="javascripts/app.js"></script>
