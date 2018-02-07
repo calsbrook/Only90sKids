@@ -1,5 +1,5 @@
 var request = require('request');
-const rootURL = 'https://api.spotify.com/'
+const rootURL = 'https://api.spotify.com/v1'
 var Song = require('../models/song')
 
 function isLoggedIn(req, res, next) {
@@ -31,6 +31,19 @@ function songDetails(req, res) {
             );
     }
 )
+
+//     request({
+//         url: 'https://accounts.spotify.com/api/token',
+//         method: 'POST', 
+//         headers: {
+//             'Authorization': 'Basic NTVkOWQxOWViZjI3NDQ3ZmEzMTI0N2MwNTc0ZmY4YTI6ODYwOThmZGY3NmFkNDM5N2EwOGE2YWQ2ZTM5YjliYTg='
+//         },
+//         form: 'grant_type=client_credentials'
+//     }, function (err, response, body) {
+//         let token = JSON.parse(response.body).access_token
+//         request({url: `${rootURL}/`)
+//     })
+// }
 }
 
 
