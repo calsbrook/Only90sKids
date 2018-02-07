@@ -10,12 +10,17 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <h1><%= title %></h1>
       <p>Welcome to <%= title %></p>
+      <audio id="player" preload="auto" auotoplay>
+          <source src="<%= allSongs[Math.floor(Math.random() * 100)].track.preview_url %>">
+      </audio>
     <ul>
+        <%= JSON.stringify(allSongs[0].track.preview_url) %>
         <% allSongs.forEach(function (element) { %>
             <div id="songs">
-            <li><strong>Artist:</strong> <%= JSON.stringify(element.track.artists[0].name) %></li>
-            <li><strong>Song:</strong> <%= JSON.stringify(element.track.name) %></li>
-            <li><strong>Album:</strong> <%= JSON.stringify(element.track.album.name) %></li>
+                <div><img src="<%= element.track.album.images[2].url%>"></div>
+                <li><strong>Artist:</strong> <%= element.track.artists[0].name %></li>
+                <li><strong>Song:</strong> <%= element.track.name %></li>
+                <li><strong>Album:</strong> <%= element.track.album.name %></li>
             </div>
         <% }) %>
     </ul>

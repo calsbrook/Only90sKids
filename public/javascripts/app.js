@@ -1,6 +1,15 @@
-require('../.env')
-var client_id = SPOTIFY_CLIENT_ID;
-var client_secret = SPOTIFY_CLIENT_SECRET;
-var redirect_uri = SPOTIFY_REDIRECT_URI;
+var player = document.getElementById("player")
 
-var scopes = 'user-read-private user-read-email';
+function playSong() {
+    player.play();
+}
+
+function pauseSong() {
+    player.pause();
+}
+
+playSong();
+
+setTimeout(function() {
+    player.pause();
+}, 10000);

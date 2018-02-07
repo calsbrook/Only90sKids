@@ -24,7 +24,6 @@ function songDetails(req, res) {
         },
             function (err, response, body) {
                 let token = JSON.parse(response.body).access_token
-                console.log(`this be the token ${token}`)
                 request({url: 'https://api.spotify.com/v1/users/myplay.com/playlists/3C64V048fGyQfCjmu9TIGA/tracks',
                 headers: {'Authorization': 'Bearer ' + token}}, 
                 function (err, response, body){
