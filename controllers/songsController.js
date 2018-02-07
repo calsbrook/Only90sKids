@@ -1,10 +1,16 @@
 var request = require('request');
 const rootURL = 'https://api.spotify.com/'
+var Song = require('../models/song')
 
 function isLoggedIn(req, res, next) {
     if ( req.isAuthenticated() ) return next();
     res.redirect('/auth/google');
 }
+
+// function renderSongQuiz(req, res) {
+//     console.log('test');
+//     res.json("[cool, joe, hey]");
+// }
 
 
 function songDetails(req, res) {

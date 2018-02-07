@@ -8,13 +8,17 @@
   </head>
   <body>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <ul class="right">
-        <li><%= JSON.stringify(allSongs[0].track.artists[0].name) %></li>
-        <li><%= JSON.stringify(allSongs[0].track.name) %></li>
-        <li><%= JSON.stringify(allSongs[0].track.album.id) %></li>
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+    <ul>
+        <% allSongs.forEach(function (element) { %>
+            <div id="songs">
+            <li><strong>Artist:</strong> <%= JSON.stringify(element.track.artists[0].name) %></li>
+            <li><strong>Song:</strong> <%= JSON.stringify(element.track.name) %></li>
+            <li><strong>Album:</strong> <%= JSON.stringify(element.track.album.name) %></li>
+            </div>
+        <% }) %>
     </ul>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="javascripts/app.js"></script>
