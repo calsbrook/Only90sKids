@@ -1,7 +1,10 @@
 var mongoose = require('mongoose')
 
 var questionSchema = new mongoose.Schema({ 
-    prompt: String,
+    prompt: {
+        type: String,
+        default: 'What song is this?'
+    },
     choice1: {
         text: String,
         id: {
@@ -34,7 +37,8 @@ var questionSchema = new mongoose.Schema({
     spotifySong: {
         type: String,
         default: null
-    }
+    },
+    imageURL: String
 });
 
 module.exports = mongoose.model('Question', questionSchema);

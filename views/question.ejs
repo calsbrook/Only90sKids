@@ -1,0 +1,164 @@
+<!-- views/partials/head.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Jockey+One|Londrina+Solid|Oswald|Press+Start+2P|Squada+One" rel="stylesheet">
+    <title>Only 90's Kids Will Get This!</title>
+</head>
+<body>
+<style>
+    
+    li {
+        display: inline;
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar {
+        /* background-image: url(https://i.imgur.com/XFKFP0S.png); */
+        background: linear-gradient(#ba20ba,#7b08ff)no-repeat fixed; 
+        /* border-bottom: linear-gradient(#4cba20,#5a39a8)no-repeat fixed;  */
+        color: white;
+        position: fixed;
+        width: 100%;
+        height: 85px;
+        top: -2px;
+        right: 0.5px;
+        overflow: hidden;
+
+    }
+    
+    .nav {
+        float: right;
+        
+    }
+    
+    
+    .intro {
+        float: left;
+        padding: 1px;
+        top: -2;
+        font-size: 20px;
+        /* font-family: 'Press Start 2P', cursive; */
+        font-family: 'Squada One', cursive;
+    }
+
+    a:visited, a:active, a { 
+    color: whitesmoke;
+    text-decoration: none;
+    /* font-family: 'Press Start 2P', cursive; */
+    /* font-family: 'Squada One', cursive; */
+    font-family: 'Jockey One', sans-serif;
+}
+
+    body {
+        background: linear-gradient(#2075ba, #fc6b32) no-repeat fixed;
+        /* background: radial-gradient(black, #fc6b32) no-repeat fixed; */
+    }
+
+    /* .contentwrap {
+        height: 700px;
+        width: 1000px;
+        /* background-color: rgba(0, 0, 0, 0.226); */
+        /* border: 2px solid rgb(178, 254, 0); */
+        /* margin: auto;
+        padding-bottom: 40px;
+        position: inherit;
+
+    } */
+
+    .content {
+        margin: 0 auto;
+        width: 800px;
+        padding-top: 105px;
+        /* background-color: rgba(0, 0, 0, 0.295); */
+        /* height: 1000px; */
+        position: sticky;
+
+    }
+
+
+    .topcontent > img {
+        display: block;
+        margin: auto;
+        border: 3px solid rgba(0, 0, 0, 0.171);
+        border-radius: 15px;
+    }
+    
+    .question {
+        font-family: 'Squada One', cursive;
+    }
+    
+    .answer {
+        display: block;
+        font-size: 25px;
+        font-family: 'Squada One', cursive;
+        padding: 3px;
+    }
+        
+
+
+    
+    #only901 {
+        margin:-115px 0px 0px 654px;
+    }
+
+
+    /* TIMER CODE  */
+
+    
+
+</style>
+    <div class="navbar">
+        <div class="intro">
+            <h1>WELCOME!</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </div>
+    </div>    
+
+    <div class="contentwrap">
+
+        <div class="content">
+            <!-- content window -->
+            <div class ="topcontent">
+                <img src="https://i.imgur.com/HKldEMj.png">
+            </div>
+            
+            <!-- question  -->
+            <div class ="question">
+                <h1>
+                    <%= question.prompt %>
+                </h1>
+                
+            </div>
+            <!-- answer options -->
+            <div class ="answer">
+                <form action="">
+                    <input type="radio" name="solution" value="1"> <%= question.choice1.text %> <br>
+                    <input type="radio" name="solution" value="2"> <%= question.choice2.text %><br>
+                    <input type="radio" name="solution" value="3"> <%= question.choice3.text %><br>
+                    <input type="radio" name="solution" value="4"> <%= question.choice4.text %><br>
+                    <input type="submit" name="" value="Submit">  
+                </form>
+            <img src="https://i.imgur.com/kTXEP2d.png" id="only901" alt="">    
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

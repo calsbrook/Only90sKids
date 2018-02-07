@@ -25,6 +25,7 @@ function songDetails(req, res) {
                     var title = req.body.name || req.query.name;
                     JSON.parse(body).items.forEach(function(element) {
                         allSongs.push(element)
+                        console.log(element.track.id)
                     })
                     res.render('songs/index', {title: '90s Kids', song: req.body, allSongs})
                 }
