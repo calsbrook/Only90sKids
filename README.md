@@ -27,3 +27,9 @@ Are you tired of those millennials claiming to be 90s kids? Well you came to the
 
 # Future Enhancements
 * Implementing other API's such as MTV, Cartoon Network and Nickelodeon.
+
+
+This project was built in 2018 by The SleepyHeads Crew. All Rights Reserved.
+
+## Thanks
+
