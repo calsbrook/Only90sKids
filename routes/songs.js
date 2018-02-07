@@ -8,5 +8,6 @@ var songsController = require('../controllers/songsController');
 // router.post('/songs', isLoggedIn, songsController.index);
 
 router.get('/', songsController.songDetails);
+router.get('/song', songsController.renderSongQuiz)
 
 module.exports = router;
