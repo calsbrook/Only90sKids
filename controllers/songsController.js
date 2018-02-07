@@ -1,5 +1,6 @@
 var request = require('request');
 const rootURL = 'https://api.spotify.com/'
+var Song = require('../models/song')
 
 function isLoggedIn(req, res, next) {
     if ( req.isAuthenticated() ) return next();
