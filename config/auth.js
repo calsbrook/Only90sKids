@@ -1,6 +1,6 @@
 var request = require('request');
 var env = require('dotenv');
-var getToken = function() {
+var getToken = function(cb) {
     request({
         url: 'https://accounts.spotify.com/api/token',
         method: 'POST', 
@@ -10,8 +10,9 @@ var getToken = function() {
         form: 'grant_type=client_credentials'
     },
     function (err, response, body) {
-        console.log(body)
+        cb(body)
         return body
     });
 }
+
 module.exports = getToken;
