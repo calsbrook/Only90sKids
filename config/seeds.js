@@ -33,7 +33,7 @@ Question.create([
         choice4: {
             text: 'Jon Tamsut'
         },
-        spotifySong: 'https://api.spotify.com/v1/tracks/7v0kHF6tXT8ekVrJAbxpph',
+        spotifySong: '7v0kHF6tXT8ekVrJAbxpph',
         correctAnswer: 3
     },
     {
@@ -342,7 +342,22 @@ Question.create([
         correctAnswer: 2,   
         imageURL: "https://i.imgur.com/lKJnDb4.png"
     },
-    
+    {
+        choice1: {
+            text: 'Hit Me Baby One More Time'
+        },
+        choice2: {
+            text: 'Creep'
+        },
+        choice3: {
+            text: 'I Want It That Way'
+        },
+        choice4: {
+            text: 'Jon Tamsut'
+        },
+        spotifySong: '1aWV3uY3SIEZVbmv45oFWS',
+        correctAnswer: 2
+    },
 
     
 ])
