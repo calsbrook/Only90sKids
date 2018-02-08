@@ -1,13 +1,14 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var userSchema = new mongoose.Schema({
+var userSchema = new Schema({
     name: String,
     score: Number,
     email: String,
     avatar: String,
     handle: String,
     googleId: String,
-    completedQuestions: [{ type: String, ref: 'Question'}]
+    completedQuestions: [{ type: Schema.Types.ObjectId, ref: 'Question'}]
 },
 {
     timestamps: true
