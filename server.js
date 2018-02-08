@@ -12,6 +12,8 @@ var songs = require('./routes/songs');
 var leaderboard = require('./routes/leaderboard');
 var questions = require('./routes/questions');
 var results = require('./routes/results');
+var dashboard = require('./routes/dashboard');
+var instruction = require('./routes/instructions');
 require('dotenv').config();
 var app = express();
 require('./config/database');
@@ -41,6 +43,8 @@ app.use('/songs', songs);
 app.use('/leaderboard', leaderboard);
 app.use('/', questions);
 app.use('/results', results);
+app.use('/dashboard', dashboard);
+app.use('/instruction', instruction)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
