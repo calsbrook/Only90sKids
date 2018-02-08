@@ -10,6 +10,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var songs = require('./routes/songs');
 var leaderboard = require('./routes/leaderboard');
+var questions = require('./routes/questions')
 require('dotenv').config();
 var app = express();
 require('./config/database');
@@ -36,6 +37,7 @@ app.use(passport.session());
 app.use('/', index);
 app.use('/songs', songs);
 app.use('/leaderboard', leaderboard);
+app.use('/', questions)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

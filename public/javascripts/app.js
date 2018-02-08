@@ -12,4 +12,4 @@ playSong();
 
 setTimeout(function() {
     player.pause();
-}, 10000);
+}, 15000);
