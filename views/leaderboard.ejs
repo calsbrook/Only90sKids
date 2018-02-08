@@ -45,13 +45,22 @@
         </tr>
      </table>
      <h2>Comment down below!</h2>
-     <form action="/action_page.php" id="usrform">
-        <textarea name="comment" form="usrform"></textarea>
-        <input type="submit">
-      </form>
-    
-    <h2>Comments: </h2>
-     <style>
+     <form>
+        <textarea id="words" rows="5" cols="30"></textarea>
+        <input type="button" onclick="getwords()" value="Enter" /> <br>
+        <h2>Comments: </h2>
+        <p id="comment"></p>
+        </form>
+
+        <script type="text/javascript">
+        function getwords() {
+            text = words.value;
+            document.getElementById("comment").innerHTML += '<p>'+text
+            document.getElementById("words").value = ""
+        }
+        </script>
+    </form>
+    <style>
         * {
             text-align: center;
             font-family: 'Jockey One', sans-serif;
@@ -149,6 +158,11 @@
             height: 385px;
             width: 445px;
         }
+
+        p {
+            font-size: 25px;
+        }
+
     </style>
 </body>
 </html>
