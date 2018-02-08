@@ -8,109 +8,119 @@
   </head>
   <body>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
     <style>
-      body {
-          background: linear-gradient(#891aa5, #fc6b32) no-repeat fixed;
-      }
+        body {
+            background: linear-gradient(#891aa5, #fc6b32) no-repeat fixed;
+        }
 
-      #only901 {
-          width: 250px;
-      }
+        #only901 {
+            width: 250px;
+        }
 
-      .centerboard {
-          width: 100%;
-          height: 400px;
-          /* background-color: rgb(255, 255, 255); */
-          right: 0.5px;
-          position: fixed;
-          /* border-top: 1px rgba(0, 255, 0, 0.13) solid; */
-          /* border-bottom: 1px lime solid; */
-      }
+        .centerboard {
+            width: 100%;
+            height: 400px;
+            /* background-color: rgb(255, 255, 255); */
+            right: 0.5px;
+            position: fixed;
+            /* border-top: 1px rgba(0, 255, 0, 0.13) solid; */
+            /* border-bottom: 1px lime solid; */
+        }
 
-      #test90 {
-          position: relative;
-          margin: -210px 0px 0px 170px;
-      }
+        #test90 {
+            position: relative;
+            margin: -210px 0px 0px 170px;
+        }
 
-      .gameinfo {
-          color: white;
-          position: relative;
-          column-count: 4;
-          margin: 260px 0px 0px 20px;
-      }
+        .gameinfo {
+            color: white;
+            position: relative;
+            column-count: 4;
+            margin: 260px 0px 0px 20px;
+        }
 
-      .gameinfo > li {
-          background: radial-gradient(rgb(240,255,29), green)no-repeat fixed;
-          /* background-color: rgb(240, 255, 29); */
-          width: 250px;
-          height: 200px;
-          border-radius: 15px;
-          padding: 10px;
-          font-family: 'Press Start 2P', cursive;
-          font-size: 12px;
-          color: black;
-          list-style: none;
-          border: 2px solid salmon;
-      }
+        .gameinfo > li {
+            background: radial-gradient(rgb(240,255,29), green)no-repeat fixed;
+            /* background-color: rgb(240, 255, 29); */
+            width: 250px;
+            height: 200px;
+            border-radius: 15px;
+            padding: 10px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            color: black;
+            list-style: none;
+            border: 2px solid salmon;
+        }
 
-     h1 {
-         font-size: 9px;
-     }
-
-
-      #pressstart {
-          background: radial-gradient(rgb(6, 167, 6), rgb(18, 148, 18));
-          color: white;
-          font-family: 'Press Start 2P', cursive;
-          /* border: none; */
-          width: 400px;  
-          height: 30px;
-          border-radius: 15px;
-          margin: 370px 0px 0px 250px;
-          position: fixed;
-      }
-
-      #pressstart:hover {
-          border: 3px orange solid;
-          color: fuchsia;
-      }
-
-      .login {
-        float: right;
-        list-style: none;
-      }
-
-      a:visited, a:active, a { 
-        color: whitesmoke;
-        font-family: 'Press Start 2P', cursive;
-}
-
-        
-      
+        h1 {
+            font-size: 9px;
+        }
 
 
-  </style>
+        #pressstart {
+            background: radial-gradient(rgb(6, 167, 6), rgb(18, 148, 18));
+            color: white;
+            font-family: 'Press Start 2P', cursive;
+            /* border: none; */
+            width: 400px;  
+            height: 30px;
+            border-radius: 15px;
+            margin: 370px 0px 0px 250px;
+            position: fixed;
+        }
+
+        #pressstart:hover {
+            border: 3px orange solid;
+            color: fuchsia;
+        }
+
+        #login2 {
+            background: radial-gradient(rgb(6, 167, 6), rgb(18, 148, 18));
+            color: white;
+            font-family: 'Press Start 2P', cursive;
+            /* border: none; */
+            width: 400px;  
+            height: 30px;
+            border-radius: 15px;
+            margin: 370px 0px 0px 250px;
+            position: fixed;
+        }
+
+        #login2:hover {
+            border: 3px orange solid;
+            color: fuchsia;
+        }
+
+        .login {
+            float: right;
+            list-style: none;
+        }
+
+        a:visited, a:active, a { 
+            color: whitesmoke;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
 
 <div class="login">  
   <p><% if (user) { %>
   <li><a href="/logout">Logout</a></li>
 <% } else { %>
-  <li><a href="/auth/google">Click Here to LOGIN!</a></li>
 <% } %></p>
 </div>
 
 <img src="https://i.imgur.com/kTXEP2d.png" id="only901" alt="">    
 
-<!-- <button id="pressstart">PRESS START</button> -->
-
 <div class="centerboard">
-  <!-- <img src="https://i.imgur.com/Trucr23.png" id="test90"> -->
   <img src="https://i.imgur.com/MVyBObg.png" id="test90">
 </div>
 
-<button id="pressstart">PRESS START</button>
+<% if (user) { %>
+    <button id="pressstart"><a href="/question">PRESS START</a></button>
+<% } else { %>
+    <button id="login2"><a href="/auth/google">Click Here to LOGIN!</a></button>
+<% } %>
 
 <div class="gameinfo">
   
@@ -168,9 +178,6 @@
 // setTimeout(function() {
 //   window.location = "/";
 // }, 3000);
-
-
-
 
   </script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>

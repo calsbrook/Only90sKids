@@ -13,17 +13,13 @@ Are you tired of those millennials claiming to be 90s kids? Well you came to the
 * Spotfiy API
 * Heroku
 
-# Pitch-Deck
-* Link: https://docs.google.com/presentation/d/1LJ6rxbW342IaAPjScVHLFxVruneUEEWZ84jFkynWzjA/edit#slide=id.g32a4f3cbeb_1_60
-
-# Trello
-* Link: https://trello.com/b/FO3H53jI/only-90s-kids-will-get-this
-
-# Heroku 
-* Link: 
+# Getting Started
+* Pitch-Deck: [link](https://docs.google.com/presentation/d/1LJ6rxbW342IaAPjScVHLFxVruneUEEWZ84jFkynWzjA/edit#slide=id.g32a4f3cbeb_1_60)
+* Trello: [link](https://trello.com/b/FO3H53jI/only-90s-kids-will-get-this)
+* Heroku: [link]() 
 
 # Unsolved Problems 
-* Spotify API
+N/A
 
 # Future Enhancements
 * Implementing other API's such as MTV, Cartoon Network and Nickelodeon.
