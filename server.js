@@ -35,6 +35,7 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
+
 app.use('/', index);
 app.use('/songs', songs);
 app.use('/leaderboard', leaderboard);
@@ -47,6 +48,8 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+
 
 // error handler
 app.use(function(err, req, res, next) {

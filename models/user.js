@@ -6,7 +6,8 @@ var userSchema = new mongoose.Schema({
     email: String,
     avatar: String,
     handle: String,
-    googleId: String
+    googleId: String,
+    completedQuestions: [{ type: String, ref: 'Question'}]
 },
 {
     timestamps: true
