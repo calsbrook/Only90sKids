@@ -3,14 +3,15 @@
 <head>
     <title>Leaderboard</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jockey+One" rel="stylesheet">
 </head>
 <body>
-        <img class="only" src="https://i.imgur.com/OaCD9ln.png">
-        <h1>Leaderboard</h1>
-        <div class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Play Again</a>
-        </div>
+    <img class="only" src="https://i.imgur.com/OaCD9ln.png">
+    <h1>Leaderboard</h1>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/question">Play Again</a>
+    </div>
     <table>
         <tr>
            <th>PLAYER</th><th>RANK</th><th>SCORE</th>
@@ -42,90 +43,111 @@
             <td>250091</td>
         </tr>
      </table>
+     <h2>Comment down below!</h2>
+     <form action="/action_page.php" id="usrform">
+        <textarea name="comment" form="usrform"></textarea>
+        <input type="submit">
+      </form>
+    
+    <h2>Comments: </h2>
      <style>
-            th {
-                border: 1px solid white;
-                width: 500px;
-                height: 50px;
-                font-family: 'Press Start 2P', cursive;
-                color: white;
-                /* background-image: url('https://i.imgur.com/XFKFP0S.png'); */
-                border-right: none;
-                border-left: none;
-                border-radius: 15px;
+        * {
+            text-align: center;
+            font-family: 'Jockey One', sans-serif;
+            color: black;
+        }
 
-            }
+        th {
+            border: 3px solid black;
+            border-color: #E6791E;
+            width: 500px;
+            height: 35px;
+            font-family: 'Press Start 2P', cursive;
+            color: black;
+            /* background-image: url('https://i.imgur.com/XFKFP0S.png'); */
+            border-right: none;
+            border-left: none;
+            border-radius: 15px;
+            text-shadow: 2px 2px 4px #E6791E;
+        }
 
-            td {
-                padding: 10px 0px 20px 10px;
-                text-align: center;
-                font-family: 'Press Start 2P', cursive;
-                color: white;
-                font-size: 20px;
-            }
-            * {
+        td {
+            padding: 10px 0px 20px 10px;
             text-align: center;
             font-family: 'Press Start 2P', cursive;
             color: black;
-            }
-    
-            body {
+            font-size: 20px;
+            text-shadow: 2px 2px 4px #662D91;
+        }
+
+        body {
             background: linear-gradient(#662D91,#E6791E)no-repeat fixed;
-            }
-    
-            h1 {
-            font-size: 65px;
-            text-shadow: 2px 2px 4px #E6791E;
-            box-shadow:
-                inset 0 0 50px #fff,      /* inner white */
-                inset 20px 0 80px #f0f,   /* inner left magenta short */
-                inset -20px 0 80px #0ff,  /* inner right cyan short */
-                inset 20px 0 300px #f0f,  /* inner left magenta broad */
-                inset -20px 0 300px #0ff, /* inner right cyan broad */
-                0 0 50px #fff,            /* outer white */
-                -10px 0 80px #f0f,        /* outer left magenta */
-                10px 0 80px #0ff;         /* outer right cyan */
+        }
+
+        h1 {
+            color: white;
+            font-size: 85px;
             margin: 0 auto;
-            }
-    
-            /* Navbar container */
-            .navbar {
-                overflow: hidden;
-                margin: 50px 0px 50px 0px;
-            }
-            
-            /* Links inside the navbar */
-            .navbar a {
-                font-size: 28px;
-                padding: 20px 25px;
-                text-shadow: 2px 2px 4px #662D91;
-                text-decoration: none;
-            }
-            
-            .navbar a:hover {
-                color: white;
-                text-shadow: 2px 2px 4px black;
-                background-color: #662D91;
-                box-shadow:
-                inset 0 0 50px #fff,      /* inner white */
-                inset 20px 0 80px #f0f,   /* inner left magenta short */
-                inset -20px 0 80px #0ff,  /* inner right cyan short */
-                inset 20px 0 300px #f0f,  /* inner left magenta broad */
-                inset -20px 0 300px #0ff, /* inner right cyan broad */
-                0 0 50px #fff,            /* outer white */
-                -10px 0 80px #f0f,        /* outer left magenta */
-                10px 0 80px #0ff;         /* outer right cyan */
-            }
-    
-            .only {
-            height: 130px;
-            }
-    
-            .scores {
+            text-shadow: 3px 3px 5px #E6791E;
+            /*
+            box-shadow:
+                inset 0 0 50px #fff,
+                inset 20px 0 80px #f0f,
+                inset -20px 0 80px #0ff,
+                inset 20px 0 300px #f0f,
+                inset -20px 0 300px #0ff,
+                0 0 50px #fff, 
+                -10px 0 80px #f0f,
+                10px 0 80px #0ff;
+            margin: 0 auto;
+            */
+        }
+
+        h2 {
+            color: white;
+            font-size: 40px;
+            text-shadow: 3px 3px 5px #662D91;
+        }
+
+        /* Navbar container */
+        .navbar {
+            overflow: hidden;
+            margin: 50px 0px 50px 0px;
+        }
+        
+        /* Links inside the navbar */
+        .navbar a {
+            color: white;
+            font-size: 25px;
+            padding: 20px 25px;
+            text-shadow: 2px 2px 4px #E6791E;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover {
+            color: white;
+            text-shadow: 2px 2px 4px black;
+            background-color: #662D91;
+            box-shadow:
+            inset 0 0 50px #fff,      /* inner white */
+            inset 20px 0 80px #f0f,   /* inner left magenta short */
+            inset -20px 0 80px #0ff,  /* inner right cyan short */
+            inset 20px 0 300px #f0f,  /* inner left magenta broad */
+            inset -20px 0 300px #0ff, /* inner right cyan broad */
+            0 0 50px #fff,            /* outer white */
+            -10px 0 80px #f0f,        /* outer left magenta */
+            10px 0 80px #0ff;         /* outer right cyan */
+        }
+
+        .only {
+            height: 115px;
+        }
+
+        .scores {
             margin: 0 auto;
             height: 385px;
             width: 445px;
-            }
-        </style>
+        }
+    </style>
 </body>
 </html>
