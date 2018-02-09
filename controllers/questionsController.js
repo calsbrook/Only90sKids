@@ -1,27 +1,40 @@
-var Question = require('../models/question');
-var User = require('../models/user');
-var Leaderboard = require('../models/leaderboard');
-var session = require('express-session');
-var request = require('request');
+const Question = require('../models/question');
+const User = require('../models/user');
+const session = require('express-session');
+const request = require('request');
 
 function getRandomQuestion(req, res) {
     var keys = Object.keys(Question)
     Question.find({}, function(err, questions) {
         let question = questions[Math.floor(Math.random() * questions.length)];
+        var newQ = newQuestion(req.user.completedQuestions, question._id);
+        console.log(req.user.completedQuestions.length);
+
+        while ( !newQ && req.user.completedQuestions.length != questions.length) {
+            console.log('newQ is', newQ);
+            question = questions[Math.floor(Math.random() * questions.length)];
+            newQ = newQuestion(req.user.completedQuestions, question._id)
+        }
+
         req.user.completedQuestions.push(question);
         req.user.save(function(err) {
             if (question.spotifySong) {
-                console.log('Song Question')
                 getSong(question.spotifySong, question, res)
             } else {
-                // console.log(req.user.completedQuestions)
-                console.log('Non Song Question')
                 res.render('question', {question, song: null});  
             }
-        })
-    })
-    // console.log(`completed questions: ${req.user.completedQuestions}`)
+        });
+    });
 }
+
+function newQuestion(arr, id) {
+    for (var index=0; index<arr.length; index++) {
+        if (arr[index].equals(id)) {
+            return false;
+        }
+    }
+    return true;
+};
 
 function getSong(songID, question, res) {
     request({
@@ -45,6 +58,19 @@ function getSong(songID, question, res) {
     });
 }
 
+function checkSubmission(req, res) {
+    // req.body = choice
+    // req.params = question id
+    Question.findById(req.params.id, function(error, question) {
+        if (question.correctAnswer === parseInt(req.body.choice)) {
+            req.user.score += 1000;
+            req.user.save();
+        }
+    })
+    res.redirect('/question');
+}
+
 module.exports = {
-    getRandomQuestion
+    getRandomQuestion,
+    checkSubmission
 }
