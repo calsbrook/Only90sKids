@@ -153,12 +153,12 @@
             </div>
             <!-- answer options -->
             <div class ="answer">
-                <form action="">
-                    <input type="radio" name="solution" value="1"> <%= question.choice1.text %> <br>
-                    <input type="radio" name="solution" value="2"> <%= question.choice2.text %><br>
-                    <input type="radio" name="solution" value="3"> <%= question.choice3.text %><br>
-                    <input type="radio" name="solution" value="4"> <%= question.choice4.text %><br>
-                    <input type="submit" name="" value="Submit">  
+                <form method="POST" action="/question/<%= question._id %>">
+                    <input type="radio" name="choice" value="1"> <%= question.choice1.text %><br>
+                    <input type="radio" name="choice" value="2"> <%= question.choice2.text %><br>
+                    <input type="radio" name="choice" value="3"> <%= question.choice3.text %><br>
+                    <input type="radio" name="choice" value="4"> <%= question.choice4.text %><br>
+                    <input type="submit" value="Submit">
                 </form>
             <img src="https://i.imgur.com/kTXEP2d.png" id="only901" alt="">    
             </div>
