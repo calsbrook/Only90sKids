@@ -9,11 +9,13 @@ var passport = require('passport');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var songs = require('./routes/songs');
+var api = require('./routes/api');
 var leaderboard = require('./routes/leaderboard');
 var questions = require('./routes/questions');
 var results = require('./routes/results');
 var dashboard = require('./routes/dashboard');
 var instruction = require('./routes/instructions');
+var cors = require('cors');
 require('dotenv').config();
 var app = express();
 require('./config/database');
@@ -37,6 +39,7 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(cors());
 
 app.use('/', index);
 app.use('/songs', songs);
@@ -44,7 +47,8 @@ app.use('/leaderboard', leaderboard);
 app.use('/', questions);
 app.use('/results', results);
 app.use('/dashboard', dashboard);
-app.use('/instruction', instruction)
+app.use('/instruction', instruction);
+app.use('/api', api)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
