@@ -1,9 +1,9 @@
 var quizSchema = new mongoose.Schema({
-    name: String,
     score: Number,
-    questions: [String],
-    answers: [String],
+    question: String,
+    options: [String],
     content: String,
+    correctanswer: String,
 },
 {
     timestamps: true

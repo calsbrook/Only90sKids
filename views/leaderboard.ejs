@@ -15,39 +15,26 @@
     </div>
     <table>
             
+
+
+            <table>
                     <tr>
-                       <th>PLAYER</th><th>RANK</th><th>SCORE</th>
+                       <th>RANK</th><th>PLAYER</th><th>SCORE</th>
                     </tr>
+                    <% users.sort(function (a, b) { return b.score - a.score }) %>
+                    <% for (var i = 0; i < users.length; i++) { %>
+                     <tr>
+                       <td><%= i + 1 %></td>
+                       <td><%= users[i].name %></td>
+                       <td><%= users[i].score %></td>
+                     </tr>    
+                    <% } %>
+                 </table>
+                    
                  
                     
                  
-         <tr>
-           <td>CDA</td>
-           <td>1ST</td>
-           <td>250091</td>
-        </tr>    
-    
-        <tr>
-            <td>JXE</td>
-            <td>2ND</td>
-            <td>250091</td>
-        </tr>
-        <tr>
-            <td>JXE</td>
-            <td>3RD</td>
-            <td>250091</td>
-        </tr>
-        <tr>
-            <td>JXE</td>
-            <td>4TH</td>
-            <td>250091</td>
-        </tr>
-        <tr>
-            <td>JXE</td>
-            <td>5TH</td>
-            <td>250091</td>
-        </tr>
-     </table>
+         
      
     <style>
         * {
