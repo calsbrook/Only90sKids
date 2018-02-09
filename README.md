@@ -1,6 +1,7 @@
-# Only 90's Kids Will Get This
-Are you tired of those millennials claiming to be 90s kids? Well you came to the right place! Welcome to Only 90's Kids Will Get This! Show who is the most 90's of them all with our 90's quiz. But be quick, you only have 15 seconds! We also have a freaking leaderboard showing who is the most 90s of them all! So pack up your yoyos and gak and get ready to compete for the title of 90ser than thou.
-![only90skidsgame](https://user-images.githubusercontent.com/33438947/36004533-091c71da-0ce8-11e8-98b2-ea60356fd1f6.png)
+# ![banner](https://user-images.githubusercontent.com/33438947/36043957-e3758fa4-0d85-11e8-984e-96633ca48439.png)
+Are you tired of those millennials claiming to be 90s kids? Well you came to the right place! Welcome to Only 90's Kids Will Get This! Show who is the most 90's of them all with our 90's quiz. We also have a freaking leaderboard showing who is the most 90s of them all! So pack up your yoyos and gak and get ready to compete for the title of 90ser than thou.
+
+# ![only90skidsgame](https://user-images.githubusercontent.com/33438947/36004533-091c71da-0ce8-11e8-98b2-ea60356fd1f6.png)
 
 # Quiz Preview
 ![only90squiz](https://user-images.githubusercontent.com/33438947/36042331-56a8e5b2-0d80-11e8-8d2a-45f56528b92a.png)
@@ -28,7 +29,7 @@ Are you tired of those millennials claiming to be 90s kids? Well you came to the
 | GET | /api/questions/:id | Retrieve a single question |
 
 # Unsolved Problems 
-An unsolved problem our team had to overcome was implementing the Spotify API.
+* An unsolved problem our team had to overcome was implementing the Spotify API.
 
 # Future Enhancements
 * Implementing other API's such as MTV, Cartoon Network and Nickelodeon.
