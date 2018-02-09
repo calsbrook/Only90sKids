@@ -5,13 +5,13 @@ const request = require('request');
 
 function getRandomQuestion(req, res) {
     var keys = Object.keys(Question)
-    Question.find({}, function(err, questions) {
+    Question.find({}, function(err, questions, user) {
+        if (req.user.completedQuestions.length === questions.length) {
+            res.redirect('/leaderboard')
+        }
         let question = questions[Math.floor(Math.random() * questions.length)];
         var newQ = newQuestion(req.user.completedQuestions, question._id);
-        console.log(req.user.completedQuestions.length);
-
         while ( !newQ && req.user.completedQuestions.length != questions.length) {
-            console.log('newQ is', newQ);
             question = questions[Math.floor(Math.random() * questions.length)];
             newQ = newQuestion(req.user.completedQuestions, question._id)
         }
@@ -36,7 +36,7 @@ function newQuestion(arr, id) {
     return true;
 };
 
-function getSong(songID, question, res) {
+function getSong(songID, question, res, user) {
     request({
         url: 'https://accounts.spotify.com/api/token',
         method: 'POST',
@@ -47,7 +47,6 @@ function getSong(songID, question, res) {
     },
     function (err, response, body) {
         let token = JSON.parse(response.body).access_token
-        console.log(songID)
         request({
             url: `https://api.spotify.com/v1/tracks/${songID}`,
             headers: {'Authorization': 'Bearer ' + token}

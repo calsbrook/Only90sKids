@@ -46,7 +46,7 @@ app.use('/songs', songs);
 app.use('/leaderboard', leaderboard);
 app.use('/', questions);
 app.use('/results', results);
-app.use('/dashboard', dashboard);
+app.use('/', dashboard);
 app.use('/instruction', instruction);
 app.use('/api', api)
 

@@ -5,11 +5,11 @@ var passport = require('passport');
 const app = express();
 
 var dashboardController = require('../controllers/dashboardController');
-router.get('/', dashboardController)
-
+function isLoggedIn(req, res, next) {
+  if ( req.isAuthenticated() ) return next();
+  res.redirect('/auth/google');
+}
 /* GET leaderboard stats. */
-router.get('/dashboard', function(req, res, next) {
-  res.render('./dashboard', { title: 'Dashboard' });
-});
+router.get('/dashboard', isLoggedIn, dashboardController.dashboardDetails)
 
 module.exports = router;
