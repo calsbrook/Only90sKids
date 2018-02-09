@@ -112,6 +112,11 @@
     /* TIMER CODE  */
 
 </style>
+<% if (song) { %>
+<audio id="player" preload="auto" auotoplay>
+    <source src="<%= JSON.parse(song).preview_url %>">
+</audio>
+<% } %>
     <div class="navbar">
         <div class="intro">
             <h1>WELCOME!</h1>
@@ -157,5 +162,6 @@
             </div>
         </div>
     </div>
-    </body>
+    <script src="javascripts/app.js"></script>
+</body>
 </html>

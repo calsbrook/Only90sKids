@@ -33,7 +33,7 @@ Question.create([
         choice4: {
             text: 'Jon Tamsut'
         },
-        spotifySong: 'https://api.spotify.com/v1/tracks/7v0kHF6tXT8ekVrJAbxpph',
+        spotifySong: '7v0kHF6tXT8ekVrJAbxpph',
         correctAnswer: 3
     },
     {
@@ -342,10 +342,116 @@ Question.create([
         correctAnswer: 2,   
         imageURL: "https://i.imgur.com/lKJnDb4.png"
     },
-    
+    {
 
+        prompt: "What was the first hit single from TLC's Crazy Sexy Cool album?",
+        choice1: {
+            text: 'Mhmm'
+        },
+        choice1: {
+            text: 'Hit Me Baby One More Time'
+        },
+        choice2: {
+            text: 'Creep'
+        },
+        choice3: {
+          text: 'Red Light Special'
+        },
+        choice4: {
+            text: 'Diggin On You'
+        },
+        spotifySong: "1aWV3uY3SIEZVbmv45oFWS",
+        correctAnswer: 2
+    },
     
-])
+    {
+        prompt: "Who played this song?",
+        choice1: {
+            text: 'Radiohead'
+        },
+        choice2: {
+            text: 'Dave Matthews Band'
+        },
+        choice3: {
+            text: 'Weezer'
+        },
+        choice4: {
+            text: 'P.O.D.'
+        },
+        spotifySong: "6b2oQwSGFkzsMtQruIWm2p",
+        correctAnswer: 1
+    },
+    {
+        prompt: "Who played this song?",
+        choice1: {
+            text: "Brittany's Experiment"
+        },
+        choice2: {
+            text: 'Brittany Spearmint'
+        },
+        choice3: {
+            text: 'Brittany Spears'
+        },
+        choice4: {
+            text: 'Mandi Moore'
+        },
+        spotifySong: "3MjUtNVVq3C8Fn0MP3zhXa",
+        correctAnswer: 3
+    },
+    
+    {
+        prompt: "Who's notorious for the party anthem 'This Is How We Do It'?",
+        choice1: {
+            text: "Tevin Campbell"
+        },
+        choice2: {
+            text: 'Montell Jordan'
+        },
+        choice3: {
+            text: 'Aries Spears'
+        },
+        choice4: {
+            text: 'Coolio'
+        },
+        spotifySong: "6uQKuonTU8VKBz5SHZuQXD",
+        correctAnswer: 2
+    },
+
+    {
+        prompt: "Who's the lead singer of the band 'No Doubt'?",
+        choice1: {
+            text: "Christina Aguillera"
+        },
+        choice2: {
+            text: 'Emily Haines'
+        },
+        choice3: {
+            text: 'Gwen Stefani'
+        },
+        choice4: {
+            text: 'Janet Jackson'
+        },
+        spotifySong: "3MjUtNVVq3C8Fn0MP3zhXa",
+        correctAnswer: 3
+    },
+
+    {
+        prompt: "Which Red Hot Chili Peppers album holds the song 'Californication'?",
+        choice1: {
+            text: "Hot Damn"
+        },
+        choice2: {
+            text: 'By The Way'
+        },
+        choice3: {
+            text: 'Blood Sugar Sex Magik'
+        },
+        choice4: {
+            text: 'Californication [Deluxe Version]'
+        },
+        spotifySong: "48UPSzbZjgc449aqz8bxox",
+        correctAnswer: 4
+    }])
 .then(function(quiz) {
     console.log(quiz)
     process.exit();
