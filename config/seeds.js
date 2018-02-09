@@ -20,6 +20,7 @@ Question.create([
         correctAnswer: 2,   
         imageURL: "https://i.imgur.com/FqGFXkH.png"
     },
+
     {
         choice1: {
             text: 'Hit Me Baby One More Time'
@@ -36,6 +37,7 @@ Question.create([
         spotifySong: 'https://api.spotify.com/v1/tracks/7v0kHF6tXT8ekVrJAbxpph',
         correctAnswer: 3
     },
+
     {
         prompt: 'What was the name of the show in which the Midnight Society would tell stories around a campfire?',
         choice1: {
@@ -53,6 +55,7 @@ Question.create([
         correctAnswer: 3,   
         imageURL: "https://i.imgur.com/cUr1J8z.png"
     },
+
     {
         prompt: 'What is the infamous childhood placezone for kids?',
         choice1: {
@@ -70,6 +73,7 @@ Question.create([
         correctAnswer: 1,   
         imageURL: "https://i.imgur.com/31WAYBh.png"
     },
+
     {
         prompt: 'Who was Doug Funny in love with in the animated series Doug?',
         choice1: {
@@ -104,6 +108,7 @@ Question.create([
         correctAnswer: 3,   
         imageURL: "https://i.imgur.com/vD5F6bo.gif"
     },
+
     {
         prompt: 'Which show is home to the infamous Camp Anawanna?',
         choice1: {
@@ -121,6 +126,7 @@ Question.create([
         correctAnswer: 1,   
         imageURL: "https://i.imgur.com/WWFFTZT.png"
     },
+
     {
         prompt: 'What year did Sonic The Hedgehog debut with his own cartoon?',
         choice1: {
@@ -138,6 +144,7 @@ Question.create([
         correctAnswer: 2,   
         imageURL: "https://i.imgur.com/TvgABsy.png"
     },
+
     {
         prompt: 'What was the first Sega Console to take a CD?',
         choice1: {
@@ -155,6 +162,7 @@ Question.create([
         correctAnswer: 2,   
         imageURL: "https://i.imgur.com/D3j9OVk.png"
     },
+
     {
         prompt: "What was the name of Sega Saturn's premier game",
         choice1: {
@@ -172,6 +180,7 @@ Question.create([
         correctAnswer: 4,   
         imageURL: "https://i.imgur.com/pw6MNpL.png"
     },
+
     {
         prompt: 'Final Fantasy VII is considered to be ________.',
         choice1: {
@@ -189,6 +198,7 @@ Question.create([
         correctAnswer: 4,   
         imageURL: "https://i.imgur.com/XD1c6xe.png"
     },
+
     {
         prompt: 'Marc Summers was the host of a show called...',
         choice1: {
@@ -206,6 +216,7 @@ Question.create([
         correctAnswer: 3,   
         imageURL: "https://i.imgur.com/QkURG9l.png"
     },
+
     {
         prompt: "What is the name of the stone deity that guides players through the story in the show 'Legends of the Hidden Temple'?",
         choice1: {
@@ -223,6 +234,7 @@ Question.create([
         correctAnswer: 2,   
         imageURL: "https://i.imgur.com/J2K0Zhs.gif"
     },
+
     {
         prompt: "How old is Bobby from Bobby's World?",
         choice1: {
@@ -240,6 +252,7 @@ Question.create([
         correctAnswer: 1,   
         imageURL: "https://i.imgur.com/KHch0Qv.png"
     },
+
     {
         prompt: 'In the cartoon series "Hey Arnold", what does Helga always call Arnold?',
         choice1: {
@@ -257,6 +270,7 @@ Question.create([
         correctAnswer: 3,   
         imageURL: "https://i.imgur.com/eXruhJ9.png"
     },
+
     {
         prompt: "What was the name of the revolutionary chat app that was mandatory for coolness in the early 90's?",
         choice1: {
@@ -274,6 +288,7 @@ Question.create([
         correctAnswer: 3,   
         imageURL: "https://i.imgur.com/WCTspD1.gif"
     },
+
     {
         prompt: "What's the name of this All That skit?",
         choice1: {
@@ -291,6 +306,7 @@ Question.create([
         correctAnswer: 4,   
         imageURL: "https://i.imgur.com/34xxBbi.gif"
     },
+
     {
         prompt: "What were the name's of the twins in the hit cartoon series 'Rugrats'?",
         choice1: {
@@ -308,6 +324,7 @@ Question.create([
         correctAnswer: 2,   
         imageURL: "https://i.imgur.com/syodOy6.png"
     },
+
     {
         prompt: "In the cartoon series 'Doug' what was the name of Doug's Best Friend?",
         choice1: {
@@ -325,6 +342,7 @@ Question.create([
         correctAnswer: 1,   
         imageURL: "https://i.imgur.com/iB8uvPV.gif"
     },
+
     {
         prompt: 'What was the legendary app Kazaa used for?',
         choice1: {
@@ -342,6 +360,7 @@ Question.create([
         correctAnswer: 2,   
         imageURL: "https://i.imgur.com/lKJnDb4.png"
     },
+
     {
         prompt: "What was the first hit single from TLC's Crazy Sexy Cool album?",
         choice1: {
@@ -377,6 +396,7 @@ Question.create([
         spotifySong: "6b2oQwSGFkzsMtQruIWm2p",
         correctAnswer: 1
     },
+
     {
         prompt: "Who played this song?",
         choice1: {
@@ -449,6 +469,41 @@ Question.create([
         correctAnswer: 4
     },
     
+    {
+        prompt: "Who made this song?",
+        choice1: {
+            text: "SClub7"
+        },
+        choice2: {
+            text: 'Spice Girls'
+        },
+        choice3: {
+            text: 'One Direction'
+        },
+        choice4: {
+            text: 'Zayn Malik who Jacksters Loves Very Much'
+        },
+        spotifySong: "1Je1IMUlBXcx1Fz0WE7oPT",
+        correctAnswer: 2
+    },
+    
+    {
+        prompt: "What's the name of this song?",
+        choice1: {
+            text: "Bush - Razorblade Suitcase"
+        },
+        choice2: {
+            text: 'Nirvana - Smells Like Teen Spirit'
+        },
+        choice3: {
+            text: 'Semisonic - Closing Time'
+        },
+        choice4: {
+            text: 'Jimi Hendrix - Watchtower'
+        },
+        spotifySong: "087OBLtoeS3Q6j0k6tMNAI",
+        correctAnswer: 2
+    },
     
 
 
