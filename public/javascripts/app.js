@@ -7,7 +7,7 @@ function playSong() {
 function pauseSong() {
     setTimeout(function() {
         player.pause();
-    }, 20000);
+    }, 15000);
 }
 
 playSong();
