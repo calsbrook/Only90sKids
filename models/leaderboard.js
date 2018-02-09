@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 
 var leaderboardSchema = new mongoose.Schema({
     player: String,
-    rank: String,
-    Score: Number
+    score: Number
 },
 {
     timestamps: true
