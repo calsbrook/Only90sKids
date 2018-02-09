@@ -1,6 +1,6 @@
-var Question = require('../models/question')
 require('dotenv').config();
 require('./database');
+var Question = require('../models/question')
 
 Question.create([
     {
@@ -57,7 +57,7 @@ Question.create([
     },
 
     {
-        prompt: 'What is the infamous childhood placezone for kids?',
+        prompt: 'What is the infamous childhood playzone?',
         choice1: {
             text: 'Discovery Zone'
         },
@@ -94,7 +94,7 @@ Question.create([
     {
         prompt: 'Who Loves Orange Soda?',
         choice1: {
-            text: 'Jon Tamsut Love Orange Soda'
+            text: 'Jon Tamsut Loves Orange Soda'
         },
         choice2: {
             text: 'I Completely Have No Idea'
