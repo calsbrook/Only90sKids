@@ -13,28 +13,20 @@
         <a href="/question">Play Again</a>
         <a href="/dashboard">Dashboard</a>
     </div>
+  
     <table>
-            
-
-
-            <table>
-                    <tr>
-                       <th>RANK</th><th>PLAYER</th><th>SCORE</th>
-                    </tr>
-                    <% users.sort(function (a, b) { return b.score - a.score }) %>
-                    <% for (var i = 0; i < users.length; i++) { %>
-                     <tr>
-                       <td><%= i + 1 %></td>
-                       <td><%= users[i].name %></td>
-                       <td><%= Math.floor((users[i].score) * Math.PI) %></td>
-                     </tr>    
-                    <% } %>
-                 </table>
-                    
-                 
-                    
-                 
-         
+        <tr>
+            <th>RANK</th><th>PLAYER</th><th>SCORE</th>
+        </tr>
+        <% users.sort(function (a, b) { return b.score - a.score }) %>
+        <% for (var i = 0; i < users.length; i++) { %>
+            <tr>
+            <td><%= i + 1 %></td>
+            <td><%= users[i].name %></td>
+            <td><%= Math.floor((users[i].score) * Math.PI) %></td>
+            </tr>    
+        <% } %>
+    </table> 
      
     <style>
         * {
