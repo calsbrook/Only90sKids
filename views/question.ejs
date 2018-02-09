@@ -112,6 +112,11 @@
     /* TIMER CODE  */
 
 </style>
+<% if (song) { %>
+<audio id="player" preload="auto" auotoplay>
+    <source src="<%= JSON.parse(song).preview_url %>">
+</audio>
+<% } %>
     <div class="navbar">
         <div class="intro">
             <h1>WELCOME!</h1>
@@ -132,7 +137,11 @@
         <div class="content">
             <!-- content window -->
             <div class ="topcontent">
-                <img src="<%=question.imageURL%>">
+                <% if (song) { %>
+                    <img src="<%= JSON.parse(song).album.images[1].url %>" >
+                <% } else { %>
+                    <img src="<%=question.imageURL%>">
+                <% } %>
             </div>
             
             <!-- question  -->
@@ -155,5 +164,6 @@
             </div>
         </div>
     </div>
-    </body>
+    <script src="javascripts/app.js"></script>
+</body>
 </html>

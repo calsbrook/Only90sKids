@@ -34,7 +34,7 @@ Question.create([
         choice4: {
             text: 'Jon Tamsut'
         },
-        spotifySong: 'https://api.spotify.com/v1/tracks/7v0kHF6tXT8ekVrJAbxpph',
+        spotifySong: '7v0kHF6tXT8ekVrJAbxpph',
         correctAnswer: 3
     },
 
@@ -362,15 +362,19 @@ Question.create([
     },
 
     {
+
         prompt: "What was the first hit single from TLC's Crazy Sexy Cool album?",
         choice1: {
             text: 'Mhmm'
+        },
+        choice1: {
+            text: 'Hit Me Baby One More Time'
         },
         choice2: {
             text: 'Creep'
         },
         choice3: {
-            text: 'Red Light Special'
+          text: 'Red Light Special'
         },
         choice4: {
             text: 'Diggin On You'
@@ -447,7 +451,7 @@ Question.create([
         choice4: {
             text: 'Janet Jackson'
         },
-        spotifySong: "3MjUtNVVq3C8Fn0MP3zhXa",
+        spotifySong: "0cQbJU1aAzvbEmTuljWLlF",
         correctAnswer: 3
     },
 

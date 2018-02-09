@@ -5,11 +5,10 @@ function playSong() {
 }
 
 function pauseSong() {
-    player.pause();
+    setTimeout(function() {
+        player.pause();
+    }, 15000);
 }
 
 playSong();
-
-setTimeout(function() {
-    player.pause();
-}, 15000);
+pauseSong();
