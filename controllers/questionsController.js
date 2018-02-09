@@ -1,5 +1,6 @@
 var Question = require('../models/question');
 var User = require('../models/user');
+var Leaderboard = require('../models/leaderboard');
 var session = require('express-session');
 var request = require('request');
 
